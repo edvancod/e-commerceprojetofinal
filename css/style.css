@@ -1,37 +1,95 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     text-decoration: none;
+    font-family: "Roboto Condensed", sans-serif
 }
 
 .main{
-    background-color: rgba(19, 18, 18, 0.795);
-    height: 100vh;
-}
-
-
-.container{
+    background-color: rgb(8, 8, 8);
+    color: #fff;
+    height: auto;
     width: 100%;
     max-width: 900px;
     margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    background-color: rgb(10, 10, 10);
-    height: 100vh;
+    padding: 16px;
+  
+}
+.logo{
+   
+    margin: 0 auto;
+     width: 100%;
+     max-width: 700px;
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.logo h1{
+    font-family: "Caveat", cursive;
+    font-size: 2.5rem;
+}
+.buy{
+    
+    background-color: #faab01;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.carrinho{
+    width: 50px;
+}
+
+.container{
     display: flex;
     flex-wrap: wrap;
-    gap: 30px;
+    justify-content: center;
+    gap: 16px;
+   
+    
+ 
+}
+.item {
+    background-color: #fff;
     padding: 16px;
-   justify-content: center;
+    height: 350px;
+    color: black;
 
 }
-.item {background-color: #fff;
-    padding: 20px;
-
-
-    ;}
-.item a img{
+.item p{
+font-weight: bold;
 width: 200px;
+padding: 8px;
+}
+    .item a img{
+        width: 200px;
+        border-radius: 5px;
+        transition:1s  ease-in-out;
+        }
+.item a img:hover{
+
+ transform: scale(1.1);
+ 
+}
+.price{
+    font-weight: bold;
+    color: #fa0101;
+    padding-left: 8px;
+    font-size: 1.3rem;
+}
+
+.footer{
+    margin-top: 16px;
+    width: 100%;
+    max-width: 900px;
+    background-color: red;
+    padding: 16px;
+    text-align: center;
+}
+.footer h4 a{
+color: aqua;
 }
