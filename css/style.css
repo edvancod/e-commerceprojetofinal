@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.main{
+    background-color: rgba(19, 18, 18, 0.795);
+    height: 100vh;
+}
+
+
+.container{
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    background-color: rgb(10, 10, 10);
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 16px;
+   justify-content: center;
+
+}
+.item {background-color: #fff;
+    padding: 20px;
+
+
+    ;}
+.item a img{
+width: 200px;
+}
