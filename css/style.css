@@ -53,6 +53,19 @@
     
  
 }
+.btn{
+    background-color: rgb(44, 192, 44);
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: rgb(232, 253, 44);
+    color: #000;
+}
 .item {
     background-color: #fff;
     padding: 16px;
