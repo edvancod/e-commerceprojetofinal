@@ -33,12 +33,15 @@
     font-family: "Caveat", cursive;
     font-size: 2.5rem;
 }
-.buy{
+.compras{
     
     background-color: #faab01;
     padding: 8px;
     border-radius: 50%;
     cursor: pointer;
+}
+.selecionado.buy{
+    background-color: red;
 }
 .carrinho{
     width: 50px;
@@ -48,12 +51,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;
-   
-    
+    gap: 16px;  
  
 }
 .btn{
+    margin-left: 16px;
     background-color: rgb(44, 192, 44);
     border: none;
     padding: 8px;
@@ -62,6 +64,7 @@
     text-transform: uppercase;
     cursor: pointer;
 }
+
 .btn:hover{
     background-color: rgb(232, 253, 44);
     color: #000;
@@ -87,6 +90,77 @@ padding: 8px;
 
  transform: scale(1.1);
  
+}
+.tela-carrinho{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #1f1e1f;
+    color: #ffc506;
+}
+.tela-carrinho table {
+    margin: 0 auto;
+    width: 80%;
+    
+    }
+    .tela-carrinho td{
+        padding: 0 16px;
+    }
+    .ocultar-tela-carrinho{
+        display: none;
+    }
+    
+    
+    
+    .tela-carrinho h2{
+        font-size: 3rem;
+        text-align: center;
+    }
+    
+    .tela-carrinho thead th{
+        background-color: #ffc506;
+        color: #000000;
+        height: 2rem;
+        font-size: 1.8rem;
+    }
+    
+    
+    
+    .tela-carrinho td{
+        font-size: 1.4rem;
+        border-bottom: 1px solid #ffc506;
+    }
+    
+    .tela-carrinho button{
+        background-color: #ffc506;
+        color: #000000;
+        border: 1px solid #1f1e1f;
+        padding: 3px;
+        border-radius: 5px;
+        margin-top: 10px;
+        cursor: pointer;
+    
+    }
+    .tela-carrinho .bi{
+        cursor: pointer;
+         font-size: 20px;
+    }
+    .organi{
+        margin: 0 10%;
+        max-width: 1024px;
+        width: 100%;
+    }
+    #total-pedido{
+        font-size: 2rem;
+    }
+    .enviar{
+        margin-left: 16px;
+    }
+.item .btn.selecionado{
+    color: #ffffff;
+    background-color: #5e5252;
 }
 .price{
     font-weight: bold;

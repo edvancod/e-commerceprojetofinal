@@ -3,13 +3,13 @@ let menuContent = document.querySelector('.logo');
 let menuToggle = menuContent.querySelector('.menu-toggle');
 let show = true;
 
-menuToggle.addEventListener('click', () => {
-    document.body.style.overflow = show ? 'hidden' : 'initial';
-    menuContent.classList.toggle('on', show);
-    show = !show;
-})
+// menuToggle.addEventListener('click', () => {
+//     document.body.style.overflow = show ? 'hidden' : 'initial';
+//     menuContent.classList.toggle('on', show);
+//     show = !show;
+// })
 
-let itensCardapio = document.querySelector(".itens-cardapio");
+let itensCardapio = document.getElementById('itens-cardapio');
 let id = 0;
 for (const p of produtos) {
     itensCardapio.innerHTML += `
@@ -17,10 +17,11 @@ for (const p of produtos) {
     <a href=""><img src="${p.img}" alt="${p.dsImg}"></a>
 
     <p>
-    ${p.nome} de 160g, com um delicioso recheio de Catupiry cremoso.
+    ${p.nome}  maravilhoso suculento
     </p>
-    <span class="price"> R$ ${p.valor}</span>
-    <button class="btn " id="${id}>Adcionar pedido</button>
+    <span class="price"> R$ ${p.valor},00</span><br>
+    
+    <button id="id${id}" class="btn">+ Adicionar</button>
 </div>
     `;
     id++;
@@ -36,9 +37,13 @@ let compras = document.querySelector('.compras');
 compras.addEventListener('click', () => {
     telaCarrinho.classList.toggle('ocultar-tela-carrinho');
     menuToggle.click(); // fechar o menu suspenso nas versões mobile
+
+
 })
 
-let lsPedido = document.querySelectorAll('.pedir');
+
+
+let lsPedido = document.querySelectorAll('.btn');
 for (const bt of lsPedido) {
     bt.addEventListener('click', () => {
         let id = bt.id.replace('id', '');
@@ -47,7 +52,7 @@ for (const bt of lsPedido) {
         if(bt.innerHTML =='REMOVER'){
             produtos[id].quantidade = 0;
             bt.innerHTML = 'pedir agora'
-            car.innerHTML = `<a href="#"><i class="bi bi-cart2"></i></a>`
+            car.innerHTML = ` <a href="#" ><i class="bi bi-cart2"></i></a>`
            
         }else{
             produtos[id].quantidade = 1;
@@ -68,16 +73,16 @@ function atualizarTabela() {
         if (p.quantidade > 0) {
             tbody.innerHTML += `
             <tr>
-                <td>${p.nome} R$ ${p.fatias8},00 </td>
-                <td>- ${p.quantidade} - pizza</td>
-                <td> R$ ${p.quantidade * p.fatias8},00 </td>
+                <td>${p.nome} R$ ${p.valor},00 </td>
+                <td> ${p.quantidade} - Hamburger</td>
+                <td> R$ ${p.quantidade * p.valor},00 </td>
                 <td>
                     <i class="bi bi-plus-square-fill" id="plus${id}"></i>
 
                     <i class="bi bi-dash-square-fill" id="dash${id}"></i>
                 </td>
             </tr>`;
-            total += p.quantidade * p.fatias8;
+            total += p.quantidade * p.valor;
         }
         id++;
     }
@@ -112,7 +117,7 @@ enviar.addEventListener('click', () => {
     let total = 0;
     for (const p of produtos) {
         if (p.quantidade > 0) {
-            msg += ` ${p.quantidade}  Pizza de ${p.nome} quantidade: ${p.fatias8}gramas = ${p.quantidade * p.fatias8}\n`;
+            msg += ` ${p.quantidade}  Pizza de ${p.nome} quantidade: ${p.valor}gramas = ${p.quantidade * p.fatias8}\n`;
             total += p.quantidade * p.fatias8;
         }
     }
