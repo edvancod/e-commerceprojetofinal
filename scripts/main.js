@@ -47,19 +47,19 @@ let lsPedido = document.querySelectorAll('.btn');
 for (const bt of lsPedido) {
     bt.addEventListener('click', () => {
         let id = bt.id.replace('id', '');
-       let car = document.getElementById('car')
+        let car = document.getElementById('car')
         bt.classList.toggle('selecionado');
-        if(bt.innerHTML =='REMOVER'){
+        if (bt.innerHTML == 'REMOVER') {
             produtos[id].quantidade = 0;
             bt.innerHTML = 'pedir agora'
             car.innerHTML = ` <i class="bi bi-cart2"></i>`
-           
-        }else{
+
+        } else {
             produtos[id].quantidade = 1;
             bt.innerHTML = 'REMOVER';
             car.innerHTML = ` <i class="bi bi-cart-plus"></i>`
         }
-       
+
         atualizarTabela();
     });
 }
@@ -85,7 +85,7 @@ function atualizarTabela() {
                         </tr>
             
            `;
-            total += p.quantidade * p.valor ;
+            total += p.quantidade * p.valor;
         }
         id++;
     }
@@ -104,8 +104,8 @@ function atualizarPlusDash(tipo) {
             }
             if (tipo == 'dash') {
                 produtos[id].quantidade--;
-                if(produtos[id].quantidade < 1){
-                    document.getElementById('id'+id).click();
+                if (produtos[id].quantidade < 1) {
+                    document.getElementById('id' + id).click();
                 }
 
             }

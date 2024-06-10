@@ -1,7 +1,6 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,7 +8,7 @@
     font-family: "Roboto Condensed", sans-serif
 }
 
-.main{
+.main {
     background-color: rgb(8, 8, 8);
     color: #fff;
     height: auto;
@@ -17,44 +16,50 @@
     max-width: 900px;
     margin: 0 auto;
     padding: 16px;
-  
+
 }
-.logo{
-   
+
+.logo {
+
     margin: 0 auto;
-     width: 100%;
-     max-width: 700px;
+    width: 100%;
+    max-width: 700px;
     display: flex;
-    justify-content:space-between;
+    justify-content: space-between;
     align-items: center;
     margin-bottom: 24px;
 }
-.logo h1{
+
+.logo h1 {
     font-family: "Caveat", cursive;
     font-size: 2.5rem;
 }
-.compras{
-    
+
+.compras {
+
     background-color: #fa0101;
     padding: 8px;
     border-radius: 50%;
     cursor: pointer;
 }
-.selecionado.buy{
+
+.selecionado.buy {
     background-color: red;
 }
-.carrinho{
+
+.carrinho {
     width: 50px;
 }
 
-.container{
+.container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 16px;  
- 
+    gap: 16px;
+
 }
-.btn{
+
+.btn {
     margin-top: 10px;
     margin-left: 16px;
     background-color: rgb(44, 192, 44);
@@ -66,10 +71,11 @@
     cursor: pointer;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: rgb(232, 253, 44);
     color: #000;
 }
+
 .item {
     background-color: #fff;
     padding: 16px;
@@ -77,22 +83,26 @@
     color: black;
 
 }
-.item p{
-font-weight: bold;
-width: 200px;
-padding: 8px;
-}
-    .item a img{
-        width: 200px;
-        border-radius: 5px;
-        transition:1s  ease-in-out;
-        }
-.item a img:hover{
 
- transform: scale(1.1);
- 
+.item p {
+    font-weight: bold;
+    width: 200px;
+    padding: 8px;
 }
-.tela-carrinho{
+
+.item a img {
+    width: 200px;
+    border-radius: 5px;
+    transition: 1s ease-in-out;
+}
+
+.item a img:hover {
+
+    transform: scale(1.1);
+
+}
+
+.tela-carrinho {
     width: 100%;
     height: 100%;
     position: fixed;
@@ -101,110 +111,124 @@ padding: 8px;
     background-color: #000000;
     color: #cd06ff;
 }
+
 .tela-carrinho table {
     margin: 0 auto;
     width: 100%;
     border: 2px solid #000;
-    
-    }
-    .tela-carrinho td{
-        text-align: center;
-        font-size: 1.4rem;
-        border-bottom: 2px solid #cd06ff;
-      
-    }
-    .ocultar-tela-carrinho{
-        display: none;
-        
-    }
-    
-    
-    
-    .tela-carrinho h2{
-        font-size: 3rem;
-        text-align: center;
-    }
-    
-    .tela-carrinho thead th{
-        background-color: #e206ff;
-        color: #000000;
-        
-        font-size: 1.8rem;
-    }
-    
-    
-    
-    
-    .tela-carrinho td img{
-        padding-top: 10px;
-        border-radius: 15%;
-        max-width: 100px;
-        width:100%;
-    }
-    .tela-carrinho td span{
-       
-       margin-left: 20px;
-    }
-    .tela-carrinho button{
-        background-color: #b806ff;
-        color: #fffefe;
-        border: 1px solid #1f1e1f;
-        padding: 10px;
-        border-radius: 5px;
-        margin-top: 10px;
-        cursor: pointer;
-    
-    }
-    .tela-carrinho .bi{
-        cursor: pointer;
-         font-size: 20px;
-    }
-    .organi{
-        margin: 0 10%;
-        max-width: 1024px;
-        width: 100%;
-    }
-    #total-pedido{
-        font-size: 2rem;
-    }
-    .enviar{
-     
-        margin-left: 16px;
-    }
-.item .btn.selecionado{
+
+}
+
+.tela-carrinho td {
+    text-align: center;
+    font-size: 1.4rem;
+    border-bottom: 2px solid #cd06ff;
+
+}
+
+.ocultar-tela-carrinho {
+    display: none;
+
+}
+
+
+
+.tela-carrinho h2 {
+    font-size: 3rem;
+    text-align: center;
+}
+
+.tela-carrinho thead th {
+    background-color: #e206ff;
+    color: #000000;
+
+    font-size: 1.8rem;
+}
+
+
+
+
+.tela-carrinho td img {
+    padding-top: 10px;
+    border-radius: 15%;
+    max-width: 100px;
+    width: 100%;
+}
+
+.tela-carrinho td span {
+
+    margin-left: 20px;
+}
+
+.tela-carrinho button {
+    background-color: #b806ff;
+    color: #fffefe;
+    border: 1px solid #1f1e1f;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    cursor: pointer;
+
+}
+
+.tela-carrinho .bi {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.organi {
+    margin: 0 10%;
+    max-width: 1024px;
+    width: 100%;
+}
+
+#total-pedido {
+    font-size: 2rem;
+}
+
+.enviar {
+
+    margin-left: 16px;
+}
+
+.item .btn.selecionado {
     color: #ffffff;
     background-color: #5e5252;
 }
-.price{
+
+.price {
     font-weight: bold;
     color: #fa0101;
     padding-left: 8px;
     font-size: 1.3rem;
 }
-.pedido{
-   width: 100%;
-   max-width: 720px;
-   margin: 0 auto;
-   padding: 8px;
+
+.pedido {
+    width: 100%;
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 8px;
 }
-.itens{
-   
+
+.itens {
+
     color: #050505;
     background-color: #ffffff;
 
 }
 
-.add{
+.add {
     background-color: #06ff13;
     width: 100px;
     height: 100%;
     padding: 16px;
 }
-.valor{
+
+.valor {
     font-weight: bold;
 }
 
-.footer{
+.footer {
     margin-top: 16px;
     width: 100%;
     max-width: 900px;
@@ -212,19 +236,22 @@ padding: 8px;
     padding: 16px;
     text-align: center;
 }
-.footer h4 a{
-color: aqua;
+
+.footer h4 a {
+    color: aqua;
 }
+
 @media (max-width:600px) {
     .tela-carrinho thead th {
-    
+
         font-size: 1.2rem;
     }
-    .tela-carrinho td img{
-        width:100%;
+
+    .tela-carrinho td img {
+        width: 100%;
     }
 
-    .tela-carrinho tbody td .valor{
+    .tela-carrinho tbody td .valor {
         font-size: 10px;
     }
 }
