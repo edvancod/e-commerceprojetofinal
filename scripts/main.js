@@ -121,7 +121,7 @@ enviar.addEventListener('click', () => {
     let total = 0;
     for (const p of produtos) {
         if (p.quantidade > 0) {
-            msg += ` Humburgue de ${p.nome} Valor untitário: ${p.valor},00 quantidade *${p.quantidade}*  = ${p.quantidade * p.valor},00\n`;
+            msg += ` Humburgue de ${p.nome} Valor untitário: ${p.valor},00\n quantidade *${p.quantidade}*  = ${p.quantidade * p.valor},00\n`;
             total += p.quantidade * p.valor;
         }
     }
