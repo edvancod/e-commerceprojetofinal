@@ -23,7 +23,7 @@ let produtos = [
     {
         img: "img/hamb-4.jpg",
         dsImg: "pizza de strogonoff",
-        nome: "Burguer 100% Angus de 120g",
+        nome: "Burguer Angus de 120g",
         valor: 25.00,
         
     },
@@ -37,7 +37,7 @@ let produtos = [
     {
         img: "img/hamb-6.jpg",
         dsImg: "pizza sabor sensação",
-        nome: "Sensação com queijo cherda",
+        nome: "Com queijo cherda",
         valor: 40.00,
         
     },
@@ -49,14 +49,14 @@ let produtos = [
         
     },
     {
-        img: "img/hamb1.webp",
+        img: "img/hamb-8.jpg",
         dsImg: "pizza sabor prestigio",
         nome: "Salada Duas Carnes",
         valor: 35.00,
         
     },
     {
-        img: "img/hamb2.webp",
+        img: "img/hamb-9.jpg",
         dsImg: "hamburger",
         nome: "Prestígio burger ",
         valor: 17.00,

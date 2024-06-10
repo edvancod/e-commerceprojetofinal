@@ -35,7 +35,7 @@
 }
 .compras{
     
-    background-color: #faab01;
+    background-color: #fa0101;
     padding: 8px;
     border-radius: 50%;
     cursor: pointer;
@@ -55,6 +55,7 @@
  
 }
 .btn{
+    margin-top: 10px;
     margin-left: 16px;
     background-color: rgb(44, 192, 44);
     border: none;
@@ -97,19 +98,24 @@ padding: 8px;
     position: fixed;
     top: 0;
     left: 0;
-    background-color: #1f1e1f;
-    color: #ffc506;
+    background-color: #000000;
+    color: #cd06ff;
 }
 .tela-carrinho table {
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
+    border: 2px solid #000;
     
     }
     .tela-carrinho td{
-        padding: 0 16px;
+        text-align: center;
+        font-size: 1.4rem;
+        border-bottom: 2px solid #cd06ff;
+      
     }
     .ocultar-tela-carrinho{
         display: none;
+        
     }
     
     
@@ -120,24 +126,30 @@ padding: 8px;
     }
     
     .tela-carrinho thead th{
-        background-color: #ffc506;
+        background-color: #e206ff;
         color: #000000;
-        height: 2rem;
+        
         font-size: 1.8rem;
     }
     
     
     
-    .tela-carrinho td{
-        font-size: 1.4rem;
-        border-bottom: 1px solid #ffc506;
-    }
     
+    .tela-carrinho td img{
+        padding-top: 10px;
+        border-radius: 15%;
+        max-width: 100px;
+        width:100%;
+    }
+    .tela-carrinho td span{
+       
+       margin-left: 20px;
+    }
     .tela-carrinho button{
-        background-color: #ffc506;
-        color: #000000;
+        background-color: #b806ff;
+        color: #fffefe;
         border: 1px solid #1f1e1f;
-        padding: 3px;
+        padding: 10px;
         border-radius: 5px;
         margin-top: 10px;
         cursor: pointer;
@@ -156,6 +168,7 @@ padding: 8px;
         font-size: 2rem;
     }
     .enviar{
+     
         margin-left: 16px;
     }
 .item .btn.selecionado{
@@ -168,6 +181,28 @@ padding: 8px;
     padding-left: 8px;
     font-size: 1.3rem;
 }
+.pedido{
+   width: 100%;
+   max-width: 720px;
+   margin: 0 auto;
+   padding: 8px;
+}
+.itens{
+   
+    color: #050505;
+    background-color: #ffffff;
+
+}
+
+.add{
+    background-color: #06ff13;
+    width: 100px;
+    height: 100%;
+    padding: 16px;
+}
+.valor{
+    font-weight: bold;
+}
 
 .footer{
     margin-top: 16px;
@@ -179,4 +214,17 @@ padding: 8px;
 }
 .footer h4 a{
 color: aqua;
+}
+@media (max-width:600px) {
+    .tela-carrinho thead th {
+    
+        font-size: 1.2rem;
+    }
+    .tela-carrinho td img{
+        width:100%;
+    }
+
+    .tela-carrinho tbody td .valor{
+        font-size: 10px;
+    }
 }

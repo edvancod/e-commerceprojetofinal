@@ -52,12 +52,12 @@ for (const bt of lsPedido) {
         if(bt.innerHTML =='REMOVER'){
             produtos[id].quantidade = 0;
             bt.innerHTML = 'pedir agora'
-            car.innerHTML = ` <a href="#" ><i class="bi bi-cart2"></i></a>`
+            car.innerHTML = ` <i class="bi bi-cart2"></i>`
            
         }else{
             produtos[id].quantidade = 1;
             bt.innerHTML = 'REMOVER';
-            car.innerHTML = ` <a href="#"><i class="bi bi-cart-plus"></i></a>`
+            car.innerHTML = ` <i class="bi bi-cart-plus"></i>`
         }
        
         atualizarTabela();
@@ -72,21 +72,24 @@ function atualizarTabela() {
     for (const p of produtos) {
         if (p.quantidade > 0) {
             tbody.innerHTML += `
-            <tr>
-                <td>${p.nome} R$ ${p.valor},00 </td>
-                <td> ${p.quantidade} - Hamburger</td>
-                <td> R$ ${p.quantidade * p.valor},00 </td>
-                <td>
-                    <i class="bi bi-plus-square-fill" id="plus${id}"></i>
-
-                    <i class="bi bi-dash-square-fill" id="dash${id}"></i>
-                </td>
-            </tr>`;
-            total += p.quantidade * p.valor;
+              <tr>
+                            <td><img src="${p.img}"> </td>
+                            <td><span class="valor">${p.nome} =R$ ${p.valor},00 </span></td>
+                            <td> ${p.quantidade} </td>
+                            <td> R$ ${p.quantidade * p.valor},00 </td>
+                            <td>
+                                <i class="bi bi-plus-square-fill" id="plus${id}"></i>
+                    
+                                <i class="bi bi-dash-square-fill" id="dash${id}"></i>
+                            </td>
+                        </tr>
+            
+           `;
+            total += p.quantidade * p.valor ;
         }
         id++;
     }
-    document.querySelector('#total-pedido').innerHTML = `Valor total do pedido = R$ ${total}`;
+    document.querySelector('#total-pedido').innerHTML = `Valor total do pedido = R$ ${total},00`;
     atualizarPlusDash('plus');
     atualizarPlusDash('dash');
 }
