@@ -120,8 +120,8 @@ enviar.addEventListener('click', () => {
     let total = 0;
     for (const p of produtos) {
         if (p.quantidade > 0) {
-            msg += ` ${p.quantidade}  Pizza de ${p.nome} quantidade: ${p.valor}gramas = ${p.quantidade * p.fatias8}\n`;
-            total += p.quantidade * p.fatias8;
+            msg += ` ${p.quantidade}  Humburgue de ${p.nome} quantidade: ${p.valor} = ${p.quantidade * p.valor}\n`;
+            total += p.quantidade * p.valor;
         }
     }
     msg += `Total = ${total}`;
