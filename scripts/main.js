@@ -121,11 +121,11 @@ enviar.addEventListener('click', () => {
     let total = 0;
     for (const p of produtos) {
         if (p.quantidade > 0) {
-            msg += ` Humburgue de ${p.nome} Valor untitário: ${p.valor},00\n quantidade *${p.quantidade}*  = ${p.quantidade * p.valor},00\n`;
+            msg += ` Humburgue de ${p.nome} Valor untitário: R$ ${p.valor},00\n quantidade *${p.quantidade}*  = R$ ${p.quantidade * p.valor},00\n`;
             total += p.quantidade * p.valor;
         }
     }
-    msg += `\n *Valor total do pedido = ${total},00* `;
+    msg += `\n *Valor total do pedido = R$ ${total},00* `;
     msg = encodeURI(msg);
     let fone = '61985945661'; // aqui coloca o telefone
     let link = `https://api.whatsapp.com/send?phone=${fone}&text=${msg}`;
