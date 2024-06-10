@@ -114,6 +114,7 @@ function atualizarPlusDash(tipo) {
     }
 }
 
+
 let enviar = document.querySelector('.enviar');
 enviar.addEventListener('click', () => {
     let msg = 'Gostaria de fazer o seguinte pedido : \n';
@@ -126,7 +127,7 @@ enviar.addEventListener('click', () => {
     }
     msg += `Total = ${total}`;
     msg = encodeURI(msg);
-    let fone = '61985945661';
+    let fone = '61985945661'; // aqui coloca o telefone
     let link = `https://api.whatsapp.com/send?phone=${fone}&text=${msg}`;
     window.open(link);
 });

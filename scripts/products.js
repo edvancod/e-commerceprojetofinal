@@ -2,7 +2,7 @@ let produtos = [
     {
         img: "img/hamb-1.jpg",
         dsImg: "hamburger",
-        nome: "Burguer 100% Angus",
+        nome: "Carne defumada Angus",
         valor: 15.00,
         
     },
@@ -23,7 +23,7 @@ let produtos = [
     {
         img: "img/hamb-4.jpg",
         dsImg: "pizza de strogonoff",
-        nome: "Burguer Angus de 120g",
+        nome: "Burguer Angus",
         valor: 25.00,
         
     },
